@@ -17,9 +17,9 @@ services:
       - DB_POSTGRESDB_SCHEMA=public
       - N8N_BASIC_AUTH_ACTIVE=true
       - N8N_BASIC_AUTH_USER=admin
-      - N8N_BASIC_AUTH_PASSWORD=adminpassword
+      - N8N_BASIC_AUTH_PASSWORD=Z_z19821982
       - GENERIC_TIMEZONE=Europe/Moscow
-      # если надо другой часовой пояс, поменяй
+     
     networks:
       - dokploy-network
 

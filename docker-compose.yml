@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  n8n:
+    image: n8nio/n8n:1.94.0
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgress-n8n-supabase.yasg-ai.ru
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=postgres
+      - DB_POSTGRESDB_USER=postgres
+      - DB_POSTGRESDB_PASSWORD=e3t9911bwjrpfx5bbr2nzt8zchs6losj
+      - DB_POSTGRESDB_SCHEMA=public
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=adminpassword
+      - GENERIC_TIMEZONE=Europe/Moscow
+      # если надо другой часовой пояс, поменяй
+    networks:
+      - dokploy-network
+
+networks:
+  dokploy-network:
+    external: true

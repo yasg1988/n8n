@@ -19,7 +19,9 @@ services:
       - N8N_BASIC_AUTH_USER=admin
       - N8N_BASIC_AUTH_PASSWORD=Z_z19821982
       - GENERIC_TIMEZONE=Europe/Moscow
-     
+      - N8N_PAYLOAD_SIZE_MAX=32
+      - NODE_OPTIONS=--max-old-space-size=8192
+
     networks:
       - dokploy-network
 

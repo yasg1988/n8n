@@ -21,6 +21,7 @@ services:
       - GENERIC_TIMEZONE=Europe/Moscow
       - N8N_PAYLOAD_SIZE_MAX=32
       - NODE_OPTIONS=--max-old-space-size=8192
+      - N8N_ENCRYPTION_KEY=dfg911bwjrpfx5bsdfilyjbr2nzt8zch
 
     networks:
       - dokploy-network
